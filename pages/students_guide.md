@@ -7,8 +7,6 @@ categories:
     - en
 ---
 
-# Guide for students
-
 This is a quick guide to using the TestMyCode extension with Visual Studio Code to test C# exercises.
 
 ## Visual Studio Code
