@@ -9,12 +9,12 @@ categories:
 
 ## TMC account & organization
 
-To create courses to [TMC](https://tmc.mooc.fi/) you need an account and an organization under which you’ll create your course. Register an account in TMC and follow [this guide](http://testmycode-usermanual.github.io/usermanual/teachers.html) to make a new organization if your school doesn’t already have one. If an organization under your school’s name already exists, ask a teacher who has access to it to give you access as well. You can see all the organizations on the TMC front page.
+To create courses to [**TMC**](https://tmc.mooc.fi/) you need an account and an organization under which you’ll create your course. Register an account in TMC and follow [**this guide**](http://testmycode-usermanual.github.io/usermanual/teachers.html) to make a new organization if your school doesn’t already have one. If an organization under your school’s name already exists, ask a teacher who has access to it to give you access as well. You can see all the organizations on the TMC front page.
 
 ## Creating a course
 
-Currently the only straightforward way for a non-admin to create a course is by using existing templates. If you just want to clone an existing course to teach it in your school, this is what you're looking for. To create a course from a template follow [this handy guide](http://testmycode-usermanual.github.io/usermanual/teachers.html#creating_a_course).
-If you want to create your own exercises you need to create a custom course from a [Git](https://en.wikipedia.org/wiki/Git) repository. There is a [guide](http://testmycode-usermanual.github.io/usermanual/customcourse.html) to creating a custom course, but to get your repository added as a source for your course you should contact the TMC admins.
+Currently the only straightforward way for a non-admin to create a course is by using existing templates. If you just want to clone an existing course to teach it in your school, this is what you're looking for. To create a course from a template follow [**this handy guide**](http://testmycode-usermanual.github.io/usermanual/teachers.html#creating_a_course).
+If you want to create your own exercises you need to create a custom course from a [**Git**](https://en.wikipedia.org/wiki/Git) repository. There is a [**guide**](http://testmycode-usermanual.github.io/usermanual/customcourse.html) to creating a custom course, but to get your repository added as a source for your course you should contact the TMC admins.
 
 ## Course repository structure
 
