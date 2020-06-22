@@ -11,7 +11,7 @@ This is a quick guide to using the TestMyCode extension with Visual Studio Code 
 
 ## Visual Studio Code
 
-Visual Studio Code can be downloaded [here](https://code.visualstudio.com/download).
+Visual Studio Code can be downloaded [**here**](https://code.visualstudio.com/download).
 
 ## Installing the TMC extension
 
@@ -27,7 +27,7 @@ In the extensions menu, type “testmycode” in the search field and the TMC ex
 
 Installing the TMC extension will add an extra button on the left side activity bar. Again, if the activity bar is hidden, it can be brought back by pressing F1, typing “activity bar” and hitting enter on the option that says “View: Toggle Activity Bar Visibility”. Clicking on the TMC button brings up the extension’s menu. 
 
-First you should log in with your TMC account. If you do not have an account, you can create one [here](https://www.mooc.fi/en/sign-up). After logging in you can click ’My courses’ and ‘Add new course’ to download exercises. Select the correct organization and click on a course to add it to your courses. After this you can click on the course and ‘Download exercises’ to bring up a list of exercises in the course. Select the ones you want to download and click ‘Download selected’. The downloaded exercises can be opened with the ‘Open exercise workspace’ button.
+First you should log in with your TMC account. If you do not have an account, you can create one [**here**](https://www.mooc.fi/en/sign-up). After logging in you can click ’My courses’ and ‘Add new course’ to download exercises. Select the correct organization and click on a course to add it to your courses. After this you can click on the course and ‘Download exercises’ to bring up a list of exercises in the course. Select the ones you want to download and click ‘Download selected’. The downloaded exercises can be opened with the ‘Open exercise workspace’ button.
 
  <img align="right" src="../resources/test_icon.png" height="60" style="padding-left: 10px;" />
 
