@@ -21,13 +21,17 @@ Visual Studio Code can be downloaded [**here**](https://code.visualstudio.com/do
 
  <img align="left" src="../resources/extensions_icon.png" height="190" style="padding-right: 10px;" />
 
-After opening vscode, extensions can be added through the extensions menu, which is opened with a button on the left side of the screen (circled in red in the image).
+After opening vscode, extensions can be added through the extensions menu, which is opened with a button on the left side of the screen (circled in red in the left image).
 If the sidebar is missing, it can be brought back by pressing F1, typing “activity bar” and hitting enter on the option that says “View: Toggle Activity Bar Visibility”. 
 Alternatively the extensions menu can be opened with ctrl+shift+X (cmd+shift+X on mac). After installing the extension the regular file explorer can be brought back up with ctrl/cmd+shift+E.
+
+<img align="left" src="../resources/tmcplugin.png" height="130" style="padding-right: 10px;" />
 
 In the extensions menu, type “testmycode” in the search field and the TMC extension will be brought up. Click it and click install to add the extension to vscode. No further setup should be needed.
 
 ### Using the TMC extension
+
+<img align="left" src="../resources/tmcbutton.png" height="220" style="padding-right: 10px;" />
 
 Installing the TMC extension will add an extra button on the left side activity bar. Again, if the activity bar is hidden, it can be brought back by pressing F1, typing “activity bar” and hitting enter on the option that says “View: Toggle Activity Bar Visibility”. Clicking on the TMC button brings up the extension’s menu. 
 
