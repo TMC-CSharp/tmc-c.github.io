@@ -87,7 +87,7 @@ The test class itself can also contain a Points-attribute, which should be place
 
 Testing whether a class or method exists can be done using [**reflection**](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/reflection). For this, your test class should include a string variable containing the name of your exercise's namespace. For an example, if the exercise is in namespace "Exercise", you would include a variable like ```private string @namespace = "Exercise";```. Reflection features must also be added to use with ```using System.Reflection;```.
 
-An example function testing if a class called ```CustomClass``` exists:
+An example method testing if a class called ```CustomClass``` exists:
 
 ```csharp
 [Fact]
@@ -100,7 +100,7 @@ public void TestCustomClassIsCreated()
 }
 ```
 
-An example function testing if a method called ```CustomMethod``` exists in class ```CustomClass``` (this could also be the main class):
+An example method testing if a method called ```CustomMethod``` exists in class ```CustomClass``` (this could also be the main class):
 
 ```csharp
 [Fact]
@@ -114,6 +114,8 @@ public void TestMethodExists()
     Assert.NotNull(info);
 }
 ```
+
+These methods can be used to test the existence of any classes or methods by just changing the relevant strings.
 
 ## Model solutions
 
