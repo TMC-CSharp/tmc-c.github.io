@@ -17,7 +17,7 @@ This guide was made by a group of students who were tasked to create a C# langua
 
 <img src="../resources/arch.png" height="600" />
 
-Test My Code ([TMC](https://testmycode.github.io/)), as you probably already know, is a suite of tools used for teaching programming. TMC has many different moving parts, but the one we need to focus on is called [TMC-langs](https://github.com/testmycode/tmc-langs/). It’s a handy framework for TMC language plugin creation that makes adding support for new languages a lot easier. To develop a new language plugin you should fork the tmc-langs repository and start developing your plugin there, since it contains all the parts you need to change and it compiles into a package that you can swap with existing TMC-langs versions for easy testing & use.
+Test My Code ([**TMC**](https://testmycode.github.io/)), as you probably already know, is a suite of tools used for teaching programming. TMC has many different moving parts, but the one we need to focus on is called [**TMC-langs**](https://github.com/testmycode/tmc-langs/). It’s a handy framework for TMC language plugin creation that makes adding support for new languages a lot easier. To develop a new language plugin you should fork the tmc-langs repository and start developing your plugin there, since it contains all the parts you need to change and it compiles into a package that you can swap with existing TMC-langs versions for easy testing & use.
 
 <img src="../resources/langs_repo.png" height="600" />
 
@@ -69,7 +69,7 @@ Runs tests for an exercise directory and saves the results to a RunResult object
 
 #### public ValidationResult checkCodeStyle(Path path, Locale messageLocale)
 
-A method for running checkstyle or a similar code style checking plugin to a project, if applicable. Returns an object that implements the ValidationResult interface of [tmc-langs-abstraction](https://github.com/testmycode/tmc-langs-abstraction). The method should return a new ValidationResult object with overrides for the getStrategy and getValidationErrors methods containing the results of code style checking. If no code style checking is used, getStrategy can be overridden to return Strategy.DISABLED and getValidationErrors to return a new empty HashMap. The documentation claims it is also fine to return null if no code style checking is used.
+A method for running checkstyle or a similar code style checking plugin to a project, if applicable. Returns an object that implements the ValidationResult interface of [**tmc-langs-abstraction**](https://github.com/testmycode/tmc-langs-abstraction). The method should return a new ValidationResult object with overrides for the getStrategy and getValidationErrors methods containing the results of code style checking. If no code style checking is used, getStrategy can be overridden to return Strategy.DISABLED and getValidationErrors to return a new empty HashMap. The documentation claims it is also fine to return null if no code style checking is used.
 
 #### public void clean(Path path)
 
