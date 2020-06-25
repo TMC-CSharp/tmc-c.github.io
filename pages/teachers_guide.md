@@ -85,6 +85,36 @@ public void DummyTest() {
 
 The test class itself can also contain a Points-attribute, which should be placed directly above the class declaration. These points are awarded when all tests in that class are passed.
 
+Testing whether a class or method exists can be done using [**reflection**](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/reflection). For this, your test class should include a string variable containing the name of your exercise's namespace. For an example, if the exercise is in namespace "Exercise", you would include a variable like ```private string @namespace = "Exercise";```. Reflection features must also be added to use with ```using System.Reflection;```.
+
+An example function testing if a class called ```CustomClass``` exists:
+
+```csharp
+[Fact]
+[Points("1")]
+public void TestCustomClassIsCreated()
+{   
+    string className = "CustomClass";
+    Type ClassType = Type.GetType($"{@namespace}.{className},{@namespace}");
+    Assert.NotNull(ClassType);
+}
+```
+
+An example function testing if a method called ```CustomMethod``` exists in class ```CustomClass``` (this could also be the main class):
+
+```csharp
+[Fact]
+[Points("1")]
+public void TestMethodExists()
+{
+    string className = "CustomClass";
+    string methodName = "CustomMethod";
+    Type ClassType = Type.GetType($"{@namespace}.{className},{@namespace}");
+    MethodInfo info = ClassType.GetMethod(methodName);
+    Assert.NotNull(info);
+}
+```
+
 ## Model solutions
 
 This will be added soon
