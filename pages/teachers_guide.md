@@ -45,8 +45,10 @@ If you're creating a custom course, we'd suggest you structure your course repsi
         - `...`
 
 
-We recommend partitioning your course into logical parts, such as weeks. If you do this, you should make every part it's own folder for that part's exercises. In every exercise folder (`part01-02_AnotherExample` above, for example) you need to have a `src` folder and a `test` folder. 
+We recommend partitioning your course into logical parts, such as weeks. If you do this, you should make every part it's own folder for that part's exercises. In every exercise folder (`part01-02_AnotherExample` above, for example) you need to have a `src` folder and a `test` folder.
+
 The `src` folder will have all the code that the student edits. You can have the student create new files or just edit ones that already exist in the exercise template. The exercise templates will also contain the model solutions that won't be visible to the student before completing the exercise, but more on how those are implemented later. Note that you can have the code either in the root of the `src` folder or in a folder in the `src` folder (like the `Exercise` folder above) but if you have no code (i.e. `.cs` files) in any folder that is an immediate child of `src` (i.e deeper than one folder under `src`) the project won't be recongized as C# by the plugin!
+
 The `test` folder will have your tests for the student's program. We suggest that you follow the naming convention used in the example above where the test `.csproj` file is named after the corresponding `.csproj` file. Note that the test `.csproj` file name **must** end in `...Tests.csproj` or the test runner won't reconize them!
 
 ## Writing the tests
