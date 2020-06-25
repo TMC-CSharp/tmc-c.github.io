@@ -15,4 +15,4 @@ TMC-C# was created as a software production course project in summer 2020. Made 
 - [Topias Teittinen](https://github.com/Tubaias)
 - [Chenhui Zhao](https://github.com/lchz)
 
-[TMC-C#](https://github.com/TMC-CSharp/) GitHub organization containing all relevant repositories.
+[**TMC-C#**](https://github.com/TMC-CSharp/) GitHub organization containing all relevant repositories.
