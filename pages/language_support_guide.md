@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Language support implementation guide
+title: Language support guide
 permalink: /guide_langsupport/
 lang: en
 categories:
