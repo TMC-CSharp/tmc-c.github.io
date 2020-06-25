@@ -1,3 +1,12 @@
+---
+layout: page
+title: Language support implementation guide
+permalink: /guide_langsupport/
+lang: en
+categories:
+    - en
+---
+
 ## Preface
 
 This guide was made by a group of students who were tasked to create a C# language plugin to TMC for the Software Engineering Lab course. We don’t have a deep understanding of the inner workings of TMC, nor do we claim to be expert coders. We created this guide mainly for anyone in a similar position: if you already understand enough tmc-langs and know how to make a test runner for your language, reading this might be a bit redundant. This guide will use our C# language plugin (and some other plugins) as reference, but keep in mind that our solutions to problems are far from perfect. This is very much a ‘how we did/interpreted it’ kind of guide.
