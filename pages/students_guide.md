@@ -7,13 +7,17 @@ categories:
     - en
 ---
 
-This is a quick guide to using the TestMyCode extension with Visual Studio Code to test C# exercises.
+This is a quick guide to using TMC (Test My Code) to test C# exercises.
 
-## Visual Studio Code
+## Using TMC With Visual Studio Code
+
+The most straightforward way to use TMC for C# exercises is by using Visual Studio Code and it's TMC extension. If you wish to use another program such as Visual Studio, refer to the command line TMC instructions below.
+
+### Visual Studio Code
 
 Visual Studio Code can be downloaded [**here**](https://code.visualstudio.com/download).
 
-## Installing the TMC extension
+### Installing the TMC extension
 
  <img align="left" src="../resources/extensions_icon.png" height="190" style="padding-right: 10px;" />
 
@@ -23,7 +27,7 @@ Alternatively the extensions menu can be opened with ctrl+shift+X (cmd+shift+X o
 
 In the extensions menu, type “testmycode” in the search field and the TMC extension will be brought up. Click it and click install to add the extension to vscode. No further setup should be needed.
 
-## Using the TMC extension
+### Using the TMC extension
 
 Installing the TMC extension will add an extra button on the left side activity bar. Again, if the activity bar is hidden, it can be brought back by pressing F1, typing “activity bar” and hitting enter on the option that says “View: Toggle Activity Bar Visibility”. Clicking on the TMC button brings up the extension’s menu. 
 
@@ -32,3 +36,7 @@ First you should log in with your TMC account. If you do not have an account, yo
  <img align="right" src="../resources/test_icon.png" height="60" style="padding-left: 10px;" />
 
 After writing your code in an exercise, you can test it with TMC by pressing the eye symbol in the top right corner. If the tests pass you are given a button to submit your solution to the TMC server. If the tests also pass on the server, you will be awarded points for the exercise. Partial points are also awarded for partially correct exercises, so if you want to submit an exercise where not all test are correct, you can do so by clicking the menu button next to the eye symbol and selecting “Submit to server”.
+
+## Using TMC through the command line
+
+If you do not wish to use TMC through the Visual Studio Code extension, you can use the TMC-cli (command line interface). Full instructions on how to install and use the cli can be found [**here**](https://github.com/testmycode/tmc-cli).
