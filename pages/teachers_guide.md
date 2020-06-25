@@ -85,6 +85,8 @@ public void DummyTest() {
 
 The test class itself can also contain a Points-attribute, which should be placed directly above the class declaration. These points are awarded when all tests in that class are passed.
 
+### Testing whether a class or method exists
+
 Testing whether a class or method exists can be done using [**reflection**](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/reflection). For this, your test class should include a string variable containing the name of your exercise's namespace. For an example, if the exercise is in namespace "Exercise", you would include a variable like ```private string @namespace = "Exercise";```. Reflection features must also be added to use with ```using System.Reflection;```.
 
 An example method testing if a class called ```CustomClass``` exists:
@@ -116,6 +118,26 @@ public void TestMethodExists()
 ```
 
 These methods can be used to test the existence of any classes or methods by just changing the relevant strings.
+
+### Stub generation library
+
+There is an additional library that can be added to use in the tests' .csproj file that will generate error throwing stubs in place of missing classes or methods. This has the benefit of avoiding visible errors in the test classes caused by missing methods or classes and the error messages given to the programmer can be easier to understand. To use the library, simply add:
+
+```csproj
+<PackageReference Include="CodeExerciseLibrary.SourceGenerator" Version="1.0.0" />
+```
+to the .csproj file's ItemGroup containing other packages.
+
+Additionally, because the library makes use of beta C# features, the following PackageReference must also be added until C# 9 releases (should be in November 2020).
+
+```csproj
+<PackageReference Include="Microsoft.Net.Compilers.Toolset" Version="3.7.0-2.final">
+    <PrivateAssets>all</PrivateAssets>
+    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+</PackageReference>
+```
+
+The library doesn't require any further setup and works on it's own.
 
 ## Model solutions
 
