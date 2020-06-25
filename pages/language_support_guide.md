@@ -15,17 +15,17 @@ This guide was made by a group of students who were tasked to create a C# langua
 
 ### TMC-langs
 
-![tmc-langs architecture](https://github.com/TMC-CSharp/tmc-csharp.github.io/blob/master/resources/arch.png)
+<img src="../resources/arch.png" height="600" />
 
 Test My Code ([TMC](https://testmycode.github.io/)), as you probably already know, is a suite of tools used for teaching programming. TMC has many different moving parts, but the one we need to focus on is called [TMC-langs](https://github.com/testmycode/tmc-langs/). It’s a handy framework for TMC language plugin creation that makes adding support for new languages a lot easier. To develop a new language plugin you should fork the tmc-langs repository and start developing your plugin there, since it contains all the parts you need to change and it compiles into a package that you can swap with existing TMC-langs versions for easy testing & use.
 
-![tmc-langs repository](https://github.com/TMC-CSharp/tmc-csharp.github.io/blob/master/resources/langs_repo.png)
+<img src="../resources/langs_repo.png" height="600" />
 
 Above you can see the structure of the TMC-langs repository. While the picture doesn’t include our C# plugin you can probably see that to add support for a new language you need to add a new module (written in Java) for your language to the list. More about what it’ll contain later.
 
 ### Test runner
 
-![smaller scale architecture](https://github.com/TMC-CSharp/tmc-csharp.github.io/blob/master/resources/arch2.png)
+<img src="../resources/arch2.png" />
 
 The other part you need to develop in addition to your language plugin in TMC-langs is your test runner. The test runner is the application that actually runs the unit tests that test the student’s program. For this you need to select a unit testing framework for the language you are implementing, which will then be the test framework that the course instructors use to write the acceptance tests for exercises. For example in our project we chose xUnit and the Python plugin uses unittest, but these are of course language specific.
 
@@ -33,7 +33,7 @@ In the above diagram the area around the runner and the unit tests is marked as 
 
 The runner’s job after the testing has concluded is to parse the test results into a .json file that TMC-langs will read and then forward to other parts of TMC. Note that the only ways TMC-langs and the runner interact are TMC-langs’ invoking of the runner (via command using Java’s ProcessBuilder, nothing fancy) and the runner creating the results .json that TMC-langs then reads.
 
-![json example](https://github.com/TMC-CSharp/tmc-csharp.github.io/blob/master/resources/jsonfile.png)
+<img src="../resources/jsonfile.png" />
 
 This also means that you have a greater freedom to implement the runner the way you see fit. While the language plugin has to inherit an abstract plugin class and should adhere to the style of other language plugins, the runner only needs to run the tests on the program (this can include compiling the program if your language is a compiled one) and produce the resulting normalized .json, the ‘how’ is up to you. Of course you should still make the runner simple and well written, especially considering performance and platform compatibility since TMC aims to make programming courses more accessible and scalable.
 
