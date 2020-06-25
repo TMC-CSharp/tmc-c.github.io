@@ -25,7 +25,7 @@ After opening vscode, extensions can be added through the extensions menu, which
 If the sidebar is missing, it can be brought back by pressing F1, typing “activity bar” and hitting enter on the option that says “View: Toggle Activity Bar Visibility”. 
 Alternatively the extensions menu can be opened with ctrl+shift+X (cmd+shift+X on mac). After installing the extension the regular file explorer can be brought back up with ctrl/cmd+shift+E.
 
-<img align="left" src="../resources/tmcplugin.png" height="130" style="padding-right: 10px;" />
+<img align="right" src="../resources/tmcplugin.png" height="130" style="padding-right: 10px;" />
 
 In the extensions menu, type “testmycode” in the search field and the TMC extension will be brought up. Click it and click install to add the extension to vscode. No further setup should be needed.
 
