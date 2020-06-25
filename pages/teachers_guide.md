@@ -53,7 +53,37 @@ The `test` folder will have your tests for the student's program. We suggest tha
 
 ## Writing the tests
 
-I'll put something here too
+The exercises should be tested using [**xUnit**](https://xunit.net/). 
+
+The tests should have their own .csproj file that contains the following imports:
+
+```csproj
+  <ItemGroup>
+    <PackageReference Include="xunit" Version="2.4.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+    <PackageReference Include="coverlet.collector" Version="1.2.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0"/>
+    <PackageReference Include="TestMyCode.CSharp.API" Version="1.0.0" />
+  </ItemGroup>
+```
+and the test class itself should include:
+
+```csharp
+using Xunit;
+using TestMyCode.CSharp.API.Attributes;
+```
+
+Tests are written in normal xUnit fashion, each test containing a ```[Fact]``` attribute and one or more Assert-statements. In addition, tests can contain a ```[Points("number")]``` attribute, which denotes the amount of points gained in TMC from passing said test. For example:
+
+```csharp
+[Fact]
+[Points("1")]
+public void DummyTest() {
+    Assert.True(true);
+}
+```
+
+The test class itself can also contain a Points-attribute, which should be placed directly above the class declaration. These points are awarded when all tests in that class are passed.
 
 ## Model solutions
 
