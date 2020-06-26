@@ -160,11 +160,11 @@ namespace TestProject
     {
         public static void Main(string[] args)
         {
-			// BEGIN SOLUTION
+	    // BEGIN SOLUTION
             Console.WriteLine("Hello world");
-			// END SOLUTION
+	    // END SOLUTION
             
-			// STUB: Console.WriteLine("Hello ");
+	    // STUB: Console.WriteLine("Hello ");
         }
     }
 }
