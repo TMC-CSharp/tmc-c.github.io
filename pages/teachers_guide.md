@@ -14,7 +14,7 @@ To create courses to [**TMC**](https://tmc.mooc.fi/) you need an account and an 
 ## Creating a course
 
 Currently the only straightforward way for a non-admin to create a course is by using existing templates. If you just want to clone an existing course to teach it in your school, this is what you're looking for. To create a course from a template follow [**this handy guide**](http://testmycode-usermanual.github.io/usermanual/teachers.html#creating_a_course).
-If you want to create your own exercises you need to create a custom course from a [**Git**](https://en.wikipedia.org/wiki/Git) repository. There is a [**guide**](http://testmycode-usermanual.github.io/usermanual/customcourse.html) to creating a custom course, but to get your repository added as a source for your course you should contact the TMC admins.
+If you want to create your own exercises you need to create a custom course from a [**Git**](https://en.wikipedia.org/wiki/Git) repository. There is a [**guide**](http://testmycode-usermanual.github.io/usermanual/customcourse.html) to creating a custom course, but at the moment (as of 6/2020) you can't create a one by following it since only admins can add source repositories due to security risks. To get your repository added as a source for your course you should contact the TMC admins.
 
 ## Course repository structure
 
@@ -147,6 +147,27 @@ Testing whether a class or method exists can be made more straightforward with t
 
 When the library is added, you can simply try to create an instance of a class or call a method. If the class or method does not exist, the library throws a [**NotImplementedException**](https://docs.microsoft.com/en-us/dotnet/api/system.notimplementedexception) and the test will fail. Thus using reflection or more complex testing methods is not needed.
 
-## Model solutions
+## Model solutions and stubs & repository access
 
-This will be added soon
+You can (and should) add model solutions and stubs to your exercises by using the default TMC way detailed in [**the guide**](http://testmycode-usermanual.github.io/usermanual/customcourse.html#writing_the_exercise).
+
+```csharp
+using System;
+
+namespace TestProject
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+			// BEGIN SOLUTION
+            Console.WriteLine("Hello world");
+			// END SOLUTION
+            
+			// STUB: Console.WriteLine("Hello ");
+        }
+    }
+}
+```
+
+The server will parse the stub version to the exercise template given to the student and give them access to the model solution once they have comleted the exercise. Note that this means that you should make your course repository **private** since crafty students could otherwise find the model solutions in GitHub. You then need to give repository access to [**tmc-deploy**](https://github.com/tmc-deploy) for the server to function properly.
