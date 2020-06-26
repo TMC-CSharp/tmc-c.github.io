@@ -85,7 +85,9 @@ public void DummyTest() {
 
 The test class itself can also contain a Points-attribute, which should be placed directly above the class declaration. These points are awarded when all tests in that class are passed.
 
-### Testing whether a class or method exists
+### Testing whether a class or method exists (with reflection)
+
+For an alternative more straightforward way to test for missing classes or methods, refer to *Testing whether a class or method exists (with the stub generation library)* below.
 
 Testing whether a class or method exists can be done using [**reflection**](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/reflection). For this, your test class should include a string variable containing the name of your exercise's namespace. For an example, if the exercise is in namespace "Exercise", you would include a variable like ```private string @namespace = "Exercise";```. Reflection features must also be added to use with ```using System.Reflection;```.
 
@@ -139,6 +141,12 @@ Additionally, because the library makes use of beta C# features, the following P
 ```
 
 The library doesn't require any further setup and works on it's own.
+
+### Testing whether a class or method exists (with the stub generation library)
+
+Testing whether a class or method exists can be made more straightforward with the forementioned stub generation library. 
+
+When the library is added, you can simply try to create an instance of a class or call a method. If the class or method does not exist, the library throws a [**NotImplementedException**](https://docs.microsoft.com/en-us/dotnet/api/system.notimplementedexception) and the test will fail. Thus using reflection or more complex testing methods is not needed.
 
 ## Model solutions
 
