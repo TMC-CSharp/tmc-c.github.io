@@ -72,7 +72,7 @@ using Xunit;
 using TestMyCode.CSharp.API.Attributes;
 ```
 
-Tests are written in normal xUnit fashion, each test containing a ```[Fact]``` attribute and one or more Assert-statements. In addition, tests can contain a ```[Points("number")]``` attribute, which denotes the amount of points gained in TMC from passing said test. For example:
+Tests are written in normal xUnit fashion, each test containing an xUnit attribute, such as ```[Fact]```, and one or more Assert-statements. In addition, tests can contain a ```[Points("number")]``` attribute, which denotes the amount of points gained in TMC from passing said test. For example:
 
 ```csharp
 [Fact]
