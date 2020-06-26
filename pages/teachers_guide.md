@@ -61,7 +61,6 @@ The tests should have their own .csproj file that contains the following imports
   <ItemGroup>
     <PackageReference Include="xunit" Version="2.4.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
-    <PackageReference Include="coverlet.collector" Version="1.2.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0"/>
     <PackageReference Include="TestMyCode.CSharp.API" Version="1.0.0" />
   </ItemGroup>
