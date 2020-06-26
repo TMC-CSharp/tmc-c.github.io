@@ -112,6 +112,7 @@ public void TestMethodExists()
     string className = "CustomClass";
     string methodName = "CustomMethod";
     Type ClassType = Type.GetType($"{@namespace}.{className},{@namespace}");
+    Assert.NotNull(ClassType);
     MethodInfo info = ClassType.GetMethod(methodName);
     Assert.NotNull(info);
 }
