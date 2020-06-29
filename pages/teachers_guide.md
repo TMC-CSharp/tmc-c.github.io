@@ -137,7 +137,7 @@ There is an additional library that can be added to use in the tests' .csproj fi
 ```
 to the .csproj file's ItemGroup containing other packages.
 
-Additionally, because the library makes use of beta C# features, the following PackageReference must also be added until C# 9 releases (should be in November 2020). This changes the default compiler to newer version.
+Additionally, because the library makes use of beta C# features, the following PackageReference must also be added until C# 9 releases (should be in November 2020). This changes the default compiler to a newer version.
 
 ```csproj
 <PackageReference Include="Microsoft.Net.Compilers.Toolset" Version="3.7.0-2.final">
@@ -146,7 +146,7 @@ Additionally, because the library makes use of beta C# features, the following P
 </PackageReference>
 ```
 
-After the compiler has been upgraded to support the new feature of C# 9 you must also specify that the use of those features are permitted by settings the LangVersion to preview.
+After the compiler has been upgraded to support the new features of C# 9 you must also specify that the use of those features is permitted by setting the LangVersion to preview.
 
 ```csproj
   <PropertyGroup>
@@ -154,20 +154,20 @@ After the compiler has been upgraded to support the new feature of C# 9 you must
   </PropertyGroup>
 ```
 
-After C# 9 has released, you don't need these changes and the PackageReference is enought.
+After C# 9 has released, you don't need these changes and the PackageReference will be enough.
 
 The library doesn't require any further setup and works on it's own. **Magic!**
 
 ### Testing whether a class or method exists (with the stub generation library)
 
-Testing whether a class or method exists can be made more straightforward with the forementioned stub generation library. 
+Testing whether a class or method exists can be made more straightforward with the stub generation library. 
 
 When the library is added, you can simply try to create an instance of a class or call a method. If the class or method does not exist, the library throws a [**NotImplementedException**](https://docs.microsoft.com/en-us/dotnet/api/system.notimplementedexception) and the test will fail. Thus using reflection or more complex testing methods is not needed.
 
 **Note!**
-Remember to reference the exercice namespace with the `using` keyword in order to the students classes to be picked up! Otherwise the classes are newer found and stubs will be generated.
+Remember to reference the exercice namespace with the `using` keyword in order for the students classes to be picked up! Otherwise the classes are not found and stubs will be generated.
 
-Also static field and method access (includes enums!) requires the use of the `partial` keyword on the test class.
+Also, static field and method access (includes enums!) requires the use of the `partial` keyword on the test class.
 
 ## Model solutions and stubs & repository access
 
@@ -196,4 +196,4 @@ The server will parse the stub version to the exercise template given to the stu
 
 ## The use of NuGet packages
 
-The NuGet packages are **not** fetched from the Internet when exercise tests are ran! The server runs the tests inside a docker container which has locally cached packages and no access to the Internet. The list of available packages can be found [**here**](https://github.com/rage/tmc-sandbox-images/blob/master/csharp/NuGetDownloader/config.json). If you would like to use newer versions of specific package(s) or to use new package altogether, you are welcome to open PR to expand the list!
+The NuGet packages are **not** fetched from the Internet when exercise tests are ran! The server runs the tests inside a docker container which has locally cached packages and no access to the Internet. The list of available packages can be found [**here**](https://github.com/rage/tmc-sandbox-images/blob/master/csharp/NuGetDownloader/config.json). If you would like to use newer versions of specific packages or a new package altogether, you are welcome to open a pull request to expand the list!
