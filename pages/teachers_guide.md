@@ -62,7 +62,7 @@ The tests should have their own .csproj file that contains the following imports
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1"/>
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.2" />
-    <PackageReference Include="TestMyCode.CSharp.API" Version="1.0.0" />
+    <PackageReference Include="TestMyCode.CSharp.API" Version="1.0.0.1" />
   </ItemGroup>
 ```
 and the test class itself should include:
@@ -133,7 +133,7 @@ These methods can be used to test the existence of any classes or methods by jus
 There is an additional library that can be added to use in the tests' .csproj file that will generate error throwing stubs in place of missing classes or methods. This has the benefit of avoiding visible errors in the test classes caused by missing methods or classes and the error messages given to the programmer can be easier to understand. To use the library, simply add:
 
 ```csproj
-<PackageReference Include="CodeExerciseLibrary.SourceGenerator" Version="1.1.3" />
+<PackageReference Include="CodeExerciseLibrary.SourceGenerator" Version="1.1.4.1" />
 ```
 to the .csproj file's ItemGroup containing other packages.
 
