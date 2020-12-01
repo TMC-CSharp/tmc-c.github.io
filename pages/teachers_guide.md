@@ -59,10 +59,10 @@ The tests should have their own .csproj file that contains the following imports
 
 ```csproj
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1"/>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.8.0"/>
+    <PackageReference Include="TestMyCode.CSharp.API" Version="1.1" />
     <PackageReference Include="xunit" Version="2.4.1" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.2" />
-    <PackageReference Include="TestMyCode.CSharp.API" Version="1.0.0.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3" />
   </ItemGroup>
 ```
 and the test class itself should include:
