@@ -133,28 +133,9 @@ These methods can be used to test the existence of any classes or methods by jus
 There is an additional library that can be added to use in the tests' .csproj file that will generate error throwing stubs in place of missing classes or methods. This has the benefit of avoiding visible errors in the test classes caused by missing methods or classes and the error messages given to the programmer can be easier to understand. To use the library, simply add:
 
 ```csproj
-<PackageReference Include="CodeExerciseLibrary.SourceGenerator" Version="1.1.4.1" />
+<PackageReference Include="CodeExerciseLibrary.SourceGenerator" Version="1.2" />
 ```
 to the .csproj file's ItemGroup containing other packages.
-
-Additionally, because the library makes use of beta C# features, the following PackageReference must also be added until C# 9 releases (should be in November 2020). This changes the default compiler to a newer version.
-
-```csproj
-<PackageReference Include="Microsoft.Net.Compilers.Toolset" Version="3.7.0-2.final">
-  <PrivateAssets>all</PrivateAssets>
-  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-</PackageReference>
-```
-
-After the compiler has been upgraded to support the new features of C# 9 you must also specify that the use of those features is permitted by setting the LangVersion to preview.
-
-```csproj
-  <PropertyGroup>
-    <LangVersion>preview</LangVersion>
-  </PropertyGroup>
-```
-
-After C# 9 has released, you don't need these changes and the PackageReference will be enough.
 
 The library doesn't require any further setup and works on it's own. **Magic!**
 
