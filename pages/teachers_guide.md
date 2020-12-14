@@ -133,7 +133,7 @@ These methods can be used to test the existence of any classes or methods by jus
 There is an additional library that can be added to use in the tests' .csproj file that will generate error throwing stubs in place of missing classes or methods. This has the benefit of avoiding visible errors in the test classes caused by missing methods or classes and the error messages given to the programmer can be easier to understand. To use the library, simply add:
 
 ```csproj
-<PackageReference Include="CodeExerciseLibrary.SourceGenerator" Version="1.2" />
+<PackageReference Include="CodeExerciseLibrary.SourceGenerator" Version="1.2.1" />
 ```
 to the .csproj file's ItemGroup containing other packages.
 
